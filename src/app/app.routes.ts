@@ -1,15 +1,18 @@
 import { Routes } from '@angular/router';
+import { MenuComponent } from './menu/menu.component';
+import { AboutmeComponent } from './aboutme/aboutme.component';
+import { NombreComponent } from './nombre/nombre.component';
 
 export const routes: Routes = [{
     path:'',
-    redirectTo:'nombre',
+    component: MenuComponent
 
 },
 {
-    path:'',
-    redirectTo:'aboutme'
+    path:'aboutme',
+    component: AboutmeComponent
 },
 {
-    path:'',
-    redirectTo:'menu'
+    path:'nombre',
+    component: NombreComponent
 }];

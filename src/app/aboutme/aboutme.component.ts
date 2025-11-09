@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-aboutme',
@@ -8,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class AboutmeComponent {
 
+  private router:Router = inject(Router);
+  onBack(){
+    this.router.navigate(['/']);
+  }
 }
