@@ -1,5 +1,6 @@
-import { Component, inject } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component} from '@angular/core';
+import { ServicdService } from '../core/services/servicd.service';
+
 
 @Component({
   selector: 'app-aboutme',
@@ -9,8 +10,10 @@ import { Router } from '@angular/router';
 })
 export class AboutmeComponent {
 
-  private router:Router = inject(Router);
-  onBack(){
-    this.router.navigate(['/']);
+  constructor(private servicio: ServicdService){}
+
+  goBack(){
+    this.servicio.onBack();
   }
+  
 }
