@@ -12,4 +12,9 @@ export class ServicdService {
   onBack(){
     this.router.navigate(['/']);
   }
+
+  toComponent(componentName:string){
+    
+    this.router.navigate([`/${componentName}`]);
+  }
 }

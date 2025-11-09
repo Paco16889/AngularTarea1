@@ -1,5 +1,6 @@
-import { Component, inject } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component } from '@angular/core';
+
+import { ServicdService } from '../core/services/servicd.service';
 
 @Component({
   selector: 'app-menu',
@@ -8,13 +9,12 @@ import { Router } from '@angular/router';
   styleUrl: './menu.component.scss'
 })
 export class MenuComponent {
-  private router:Router = inject(Router);
+  
 
-  toNombre(){
-    this.router.navigate(['/nombre']);
-  }
+  constructor(private service: ServicdService){}
 
-  toAboutMe(){
-    this.router.navigate(['/aboutme'])
-  }
+
+goTo(componentName:string){
+  this.service.toComponent(componentName);
+}
 }
