@@ -1,5 +1,13 @@
 <div class="grid place-items-center bg-slate-300 h-screen">
     <p>welcome to nombre</p>
+    <input class="border-2 border-gray-400 rounded px-3 pt-5 pb-2 text-lg focus:outline-none focus:border-blue-500" type="text" [(ngModel)]="name" (keyup.enter)="onEnter()">
+    @if (textoMostrado) {
+        <p>hola {{finalName}}</p>
+        <button type="submit" class="bg-gray-200 border border-gray-400 text-black px-3 py-1 rounded shadow-sm active:translate-y-px" (click)="goRefresh()" >
+            Refrescar
+    </button>
+
+    }
     <button type="submit" class="bg-gray-200 border border-gray-400 text-black px-3 py-1 rounded shadow-sm active:translate-y-px" (click)="goBack()" >
             Menú
     </button>
